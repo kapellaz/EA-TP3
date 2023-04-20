@@ -68,13 +68,6 @@ void dfs(int u){
 }
 
 void tarjan(int n){
-    /*ids.resize(n);
-    low.resize(n);
-    on_stack.resize(n);
-    fill(ids.begin(), ids.end(), 0);
-    fill(on_stack.begin(), on_stack.end(), false);
-    */
-
     ids = vector<int> (n,0);
     low = vector<int> (n,0);
     on_stack = vector<bool> (n,false);
