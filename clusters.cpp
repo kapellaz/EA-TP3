@@ -1,3 +1,7 @@
+/*
+    Rui Santos: 2020225542 
+    Tomás Dias: 2020215701
+*/
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -82,6 +86,13 @@ void tarjan(int n){
 int main(){
     int size;
     while(cin >> size){
+        sccs.clear();
+        g1.clear();
+        g.clear();
+        ids.clear();
+        low.clear();
+        on_stack.clear();
+        saldos.clear();
         int conta = 0;
         int a, to, b;
         g = vector<vector<int>> (size);
@@ -137,9 +148,8 @@ int main(){
                 }
             }
         }
-        sccs.clear();
         if(debug) cout << "result: " << endl;
-        if(out != 0) cout << out << endl;
+        if(maxsize>1) cout << out << endl;
         else cout << "No cluster" << endl;
     }
 }
