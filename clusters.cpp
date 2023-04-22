@@ -139,12 +139,10 @@ int main(){
         for(auto& scc : sccs){
             int s = scc.size();
             if(s > 1){
-                if(s > maxsize){
-                    out = 0;
-                    maxsize = s;
-                    for(int v : scc){
-                        out += saldos[v];
-                    }
+                out = 0;
+                maxsize = s;
+                for(int v : scc){
+                    out += saldos[v];
                 }
             }
         }
